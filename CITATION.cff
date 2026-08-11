@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: "ProofRail — Reproducibility Package"
+message: "If you use this package, please cite both the thesis and this repository."
+type: software
+authors:
+  - family-names: Dhage
+    given-names: Rajdeep
+    affiliation: "A. Gary Anderson Graduate School of Management, University of California, Riverside"
+abstract: >-
+  Data, per-transaction execution logs, metric computation code, a standalone
+  audit-chain verifier, and KNIME comparison workflows supporting the benchmark
+  results for ProofRail, an event-driven conditional settlement engine operating
+  on existing bank rails without tokenization.
+keywords:
+  - conditional settlement
+  - payment systems
+  - financial inclusion
+  - hash-linked audit log
+  - reproducibility
+  - synthetic data
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+version: 0.1.0
+repository-code: "https://github.com/rajdeepdhage/proofrail-reproducibility"
+# Add date-released, repository-code, and the version DOI only after the tagged
+# release exists. Code is MIT licensed; data and documentation are CC BY 4.0.
+references:
+  - type: thesis
+    title: >-
+      Programmable Settlement Without Tokenization: A Hybrid Book-Entry
+      Ownership Registry with Event-Driven Conditional Settlement as an
+      Alternative to Tokenized Financial Infrastructure
+    authors:
+      - family-names: Dhage
+        given-names: Rajdeep
+    institution:
+      name: University of California, Riverside
+    thesis-type: "MBA thesis"
+    year: 2026

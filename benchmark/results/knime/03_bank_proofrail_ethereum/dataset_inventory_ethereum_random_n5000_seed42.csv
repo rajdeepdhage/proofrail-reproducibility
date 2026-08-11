@@ -1,0 +1,6 @@
+"source_dataset","system_type","provenance","Count(transaction_id)"
+"ethereum_onchain","blockchain","crypto_onchain",5000
+"jpm_aml","banking","synthetic_research",2473
+"jpm_customer_journey","banking","synthetic_research",46
+"jpm_fraud_payment","banking","synthetic_research",2481
+"proofrail_synthetic","proofrail","synthetic_research",5000

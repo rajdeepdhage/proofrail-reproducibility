@@ -1,0 +1,27 @@
+{
+  "alternative": "two-sided",
+  "bank_n": 5000,
+  "inputs": {
+    "bank": "/home/claude/ghcheck/benchmark/row_level/bank_random_n5000_seed42.csv",
+    "bank_row_accounting": {
+      "invalid": 0,
+      "missing": 0,
+      "negative": 0,
+      "rows": 5000
+    },
+    "column": "amount_usd",
+    "proofrail": "/home/claude/ghcheck/benchmark/row_level/proofrail_random_n5000_seed42.csv",
+    "proofrail_row_accounting": {
+      "invalid": 0,
+      "missing": 0,
+      "negative": 0,
+      "rows": 5000
+    }
+  },
+  "interpretation_guardrail": "A large p-value is failure to detect a difference, not evidence of equivalence. Report D, sample sizes, the fixed-seed sampling design, and that calibration is partly by construction.",
+  "ks_d": 0.446,
+  "p_value_asymptotic": 0.0,
+  "proofrail_n": 5000,
+  "test": "two-sample Kolmogorov-Smirnov",
+  "transform": "natural log1p(amount_usd)"
+}

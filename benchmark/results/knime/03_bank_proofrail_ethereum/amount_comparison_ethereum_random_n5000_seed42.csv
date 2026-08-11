@@ -1,0 +1,4 @@
+"system_type","Count(transaction_id)","Mean(amount_usd)","Min*(amount_usd)","Max*(amount_usd)","Median(amount_usd)"
+"banking",5000,70763.31775591629,0,3932988,673.345
+"blockchain",5000,4504.630834079619,0.00000000000000381266,5528357,73.55661402274413
+"proofrail",5000,4692.253573999999,29.88,150000,2509.335

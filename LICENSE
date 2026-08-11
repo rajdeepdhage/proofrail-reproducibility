@@ -1,0 +1,16 @@
+This repository is released under two licenses, by material type.
+
+CODE  — generator/, metrics/, verifier/, scripts/, tests/
+        MIT License. Full text: LICENSE-CODE
+
+DATA  — benchmark/, docs/, knime/, spss/, and all Markdown files
+        Creative Commons Attribution 4.0 International (CC BY 4.0).
+        Full text: LICENSE-DATA
+
+SCOPE NOTE: The MIT license applies only to the source code published in this
+repository. It grants no rights in the ProofRail engine core, which is not
+published here, nor any license under pending or issued patent claims.
+
+THIRD-PARTY DATA: The J.P. Morgan AI Research synthetic datasets referenced by
+this study are NOT included here and are NOT covered by these licenses. See
+DATA_ACCESS.md.

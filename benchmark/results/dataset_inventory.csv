@@ -1,0 +1,9 @@
+dataset,family,architecture,exists,path,file_size_mb,rows_profiled,profile_limit,column_count,error
+validation_cases,validation,validation_input,True,outputs/proofrail_validation_sample/validation_cases.csv,0.02,75,,22,
+bank_internal_ledger,bank,bank,True,outputs/proofrail_validation_sample/bank_internal_ledger.csv,0.146,462,,26,
+bank_customer_journey,bank,bank,True,outputs/proofrail_validation_sample/bank_customer_journey.csv,0.062,380,,9,
+bank_validation_event_log,bank,bank,True,outputs/proofrail_validation_sample/bank_validation_event_log.csv,0.069,462,,14,
+prototype_summary,prototype,prototype,True,outputs/proofrail_validation_sample/prototype_summary.csv,0.012,75,,20,
+prototype_step_log,prototype,prototype,True,outputs/proofrail_validation_sample/prototype_step_log.csv,0.04,290,,18,
+bank_manual_summary,bank,bank,True,outputs/proofrail_validation_sample/bank_manual_summary.csv,0.01,75,,17,
+bank_manual_step_log,bank,bank,True,outputs/proofrail_validation_sample/bank_manual_step_log.csv,0.058,458,,17,

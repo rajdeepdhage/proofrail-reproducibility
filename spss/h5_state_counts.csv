@@ -1,0 +1,9 @@
+system,terminal_state,count
+Bank,exception_or_held,618
+Bank,completed_normally,4382
+USDC,exception_or_held,0
+USDC,completed_normally,5000
+ProofRail,exception_or_held,1396
+ProofRail,completed_normally,3604
+Ethereum,exception_or_held,25
+Ethereum,completed_normally,4975

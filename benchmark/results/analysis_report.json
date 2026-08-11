@@ -1,0 +1,342 @@
+{
+  "architecture_summary": [
+    {
+      "architecture": "bank",
+      "auditability_rollup_mean": 8.0,
+      "auditability_score_mean": 8.0,
+      "authorization_latency_s_p50": 3171.1,
+      "authorization_latency_s_p90": 5364.26,
+      "automated_check_count_mean": 0.9733,
+      "chain_finality_s_p50": null,
+      "chain_finality_s_p90": null,
+      "end_to_end_time_s_p50": 125646.6,
+      "end_to_end_time_s_p90": 260309.79,
+      "irreversible_dispute_cases": 0,
+      "manual_touch_count_mean": 3.2,
+      "n_cases": 75,
+      "settlement_time_s_p50": 3171.1,
+      "settlement_time_s_p90": 5364.26,
+      "status_counts_json": "{\"completed\": 70, \"disputed\": 2, \"unresolved\": 3}",
+      "systems_json": "{\"bank_manual\": 75}",
+      "verification_burden_mean": 3.2
+    },
+    {
+      "architecture": "prototype",
+      "auditability_rollup_mean": 11.9733,
+      "auditability_score_mean": 11.9733,
+      "authorization_latency_s_p50": 0.0,
+      "authorization_latency_s_p90": 0.081,
+      "automated_check_count_mean": 5.7467,
+      "chain_finality_s_p50": null,
+      "chain_finality_s_p90": null,
+      "end_to_end_time_s_p50": 0.002,
+      "end_to_end_time_s_p90": 0.082,
+      "irreversible_dispute_cases": 0,
+      "manual_touch_count_mean": 0.0267,
+      "n_cases": 75,
+      "settlement_time_s_p50": 0.0,
+      "settlement_time_s_p90": 0.081,
+      "status_counts_json": "{\"disputed\": 2, \"held\": 3, \"released\": 70}",
+      "systems_json": "{\"conditional_settlement_prototype\": 75}",
+      "verification_burden_mean": 0.0267
+    }
+  ],
+  "bank_sensitivity_sweep": {
+    "path": "outputs/proofrail_validation_sample/bank_sensitivity_sweep.json",
+    "result_ranges": {
+      "authorization_working_hours_median": {
+        "max": 1.0,
+        "min": 0.84
+      },
+      "authorization_working_hours_p90": {
+        "max": 4.15,
+        "min": 1.21
+      },
+      "automated_check_count_mean": {
+        "max": 0.97,
+        "min": 0.97
+      },
+      "end_to_end_working_hours_median": {
+        "max": 57.61,
+        "min": 21.31
+      },
+      "end_to_end_working_hours_p90": {
+        "max": 129.99,
+        "min": 36.61
+      },
+      "manual_touch_count_mean": {
+        "max": 3.43,
+        "min": 3.13
+      }
+    },
+    "scenario_count": 27,
+    "swept_parameter_ranges": {
+      "condition_wait_scale": {
+        "max": 2.0,
+        "min": 0.5
+      },
+      "manual_review_rate": {
+        "max": 0.24,
+        "min": 0.06
+      },
+      "staff_scale": {
+        "max": 1.5,
+        "min": 0.75
+      }
+    }
+  },
+  "combined_step_rows": 1210,
+  "comparison_readiness": {
+    "metric_basis_counts": {
+      "condition_evaluation_decision_time_ms": 75,
+      "manual_processing_excludes_document_wait_and_downstream_rail": 75
+    },
+    "raw_comparison_included": false,
+    "raw_rows_compared": 0,
+    "rows_compared": 150,
+    "rows_with_timing": 145,
+    "systems_compared": 2,
+    "timing_coverage_pct": 96.67
+  },
+  "comparison_summary": [
+    {
+      "amount_usd_mean": 6998.21,
+      "architecture": "bank",
+      "auditability_rollup_mean": 8.0,
+      "auditability_score_mean": 8.0,
+      "authorization_latency_s_mean": 3906.0907,
+      "authorization_latency_s_p50": 3171.1,
+      "authorization_latency_s_p90": 5364.26,
+      "automated_check_count_mean": 0.9733,
+      "chain_finality_s_p50": null,
+      "chain_finality_s_p90": null,
+      "completed_cases": 70,
+      "completeness_mean": 3.0,
+      "end_to_end_time_s_p50": 125646.6,
+      "end_to_end_time_s_p90": 260309.79,
+      "exception_or_open_cases": 5,
+      "independent_verifiability_mean": 2.0,
+      "irreversible_dispute_cases": 0,
+      "manual_touch_count_mean": 3.2,
+      "n_cases": 75,
+      "non_repudiation_mean": 2.0,
+      "settlement_time_s_mean": 3906.0907,
+      "settlement_time_s_p50": 3171.1,
+      "settlement_time_s_p90": 5364.26,
+      "status_counts_json": "{\"completed\": 70, \"disputed\": 2, \"unresolved\": 3}",
+      "system_type": "bank_manual",
+      "tamper_evidence_mean": 1.0,
+      "verification_burden_mean": 3.2
+    },
+    {
+      "amount_usd_mean": 6998.21,
+      "architecture": "prototype",
+      "auditability_rollup_mean": 11.9733,
+      "auditability_score_mean": 11.9733,
+      "authorization_latency_s_mean": 0.0139,
+      "authorization_latency_s_p50": 0.0,
+      "authorization_latency_s_p90": 0.081,
+      "automated_check_count_mean": 5.7467,
+      "chain_finality_s_p50": null,
+      "chain_finality_s_p90": null,
+      "completed_cases": 70,
+      "completeness_mean": 3.0,
+      "end_to_end_time_s_p50": 0.002,
+      "end_to_end_time_s_p90": 0.082,
+      "exception_or_open_cases": 5,
+      "independent_verifiability_mean": 3.0,
+      "irreversible_dispute_cases": 0,
+      "manual_touch_count_mean": 0.0267,
+      "n_cases": 75,
+      "non_repudiation_mean": 2.9733,
+      "settlement_time_s_mean": 0.0139,
+      "settlement_time_s_p50": 0.0,
+      "settlement_time_s_p90": 0.081,
+      "status_counts_json": "{\"disputed\": 2, \"held\": 3, \"released\": 70}",
+      "system_type": "conditional_settlement_prototype",
+      "tamper_evidence_mean": 3.0,
+      "verification_burden_mean": 0.0267
+    }
+  ],
+  "datasets_missing": [],
+  "datasets_seen": 8,
+  "generated_dir": "outputs/proofrail_validation_sample",
+  "generation_profile": {
+    "conformance_test": {
+      "cases": 75,
+      "confusion_matrix": {
+        "DISPUTED": {
+          "DISPUTED": 2
+        },
+        "HELD": {
+          "HELD": 3
+        },
+        "RELEASED": {
+          "RELEASED": 70
+        }
+      },
+      "failed": 0,
+      "note": "Conformance test: expected_outcome and the prototype both derive from the scenario field, so this confirms the implementation matches the specification \u2014 it does not establish that the specification is the correct design.",
+      "ok": true,
+      "pass_rate": 1.0,
+      "passed": 75,
+      "sample_mismatches": []
+    },
+    "design": "Synthetic bank-internal validation data only. No external settlement-rail rows, no provenance labels, and no raw external row copying.",
+    "generator_kind": "bank_internal_validation_synthetic",
+    "generator_version": "proofrail_bank_internal_v2",
+    "outputs": {
+      "bank_customer_journey": "outputs/proofrail_validation_sample/bank_customer_journey.csv",
+      "bank_internal_ledger": "outputs/proofrail_validation_sample/bank_internal_ledger.csv",
+      "bank_validation_event_log": "outputs/proofrail_validation_sample/bank_validation_event_log.csv",
+      "profile": "outputs/proofrail_validation_sample/generation_profile.json",
+      "prototype_step_log": "outputs/proofrail_validation_sample/prototype_step_log.csv",
+      "prototype_summary": "outputs/proofrail_validation_sample/prototype_summary.csv",
+      "validation_cases": "outputs/proofrail_validation_sample/validation_cases.csv"
+    },
+    "prototype_replay": {
+      "audit": {
+        "count_verified": 440,
+        "ok": true
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Replayed 75/75 transactions in-process.",
+      "steps_csv": "outputs/proofrail_validation_sample/prototype_step_log.csv",
+      "summary_csv": "outputs/proofrail_validation_sample/prototype_summary.csv"
+    },
+    "provenance": {
+      "generator_kind": "bank_internal_validation_synthetic",
+      "generator_version": "proofrail_bank_internal_v2",
+      "scope_notice": "Demonstration study \u2014 synthetic/modeled data, not measured production data.",
+      "seed": 42,
+      "swept_parameter_ranges": {
+        "condition_wait_scale": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "manual_review_rate": [
+          0.06,
+          0.12,
+          0.24
+        ],
+        "staff_scale": [
+          0.75,
+          1.0,
+          1.5
+        ]
+      },
+      "synthetic": true
+    },
+    "seed": 42,
+    "summary": {
+      "amount_usd_max": 48582.7,
+      "amount_usd_mean": 6998.21,
+      "amount_usd_min": 217.65,
+      "cases": 75,
+      "channels": {
+        "api_instruction": 15,
+        "branch_ops": 3,
+        "relationship_manager": 25,
+        "secure_email": 7,
+        "treasury_portal": 25
+      },
+      "risk_bands": {
+        "high": 4,
+        "low": 53,
+        "medium": 18
+      },
+      "scenarios": {
+        "delayed": 12,
+        "disputed": 2,
+        "exception": 3,
+        "normal": 58
+      },
+      "transaction_types": {
+        "GOODS_SETTLEMENT": 29,
+        "INVOICE_PAYMENT": 24,
+        "MILESTONE_PAYMENT": 15,
+        "SERVICE_RETAINER": 7
+      }
+    },
+    "validation_contract": {
+      "extra_fields_are_bank_internal_context": true,
+      "prototype_replay_input": "validation_cases.csv",
+      "required_fields": [
+        "transaction_id",
+        "payer_id",
+        "payee_id",
+        "amount_usd",
+        "transaction_type",
+        "required_events",
+        "scenario",
+        "expected_outcome",
+        "created_offset_s"
+      ]
+    }
+  },
+  "normalized_rows": 150,
+  "out_dir": "outputs/proofrail_live_comparison",
+  "outputs": {
+    "analysis_report_json": "outputs/proofrail_live_comparison/analysis_report.json",
+    "combined_step_log_csv": "outputs/proofrail_live_comparison/combined_step_log.csv",
+    "comparison_summary_by_architecture_csv": "outputs/proofrail_live_comparison/comparison_summary_by_architecture.csv",
+    "comparison_summary_by_system_csv": "outputs/proofrail_live_comparison/comparison_summary_by_system.csv",
+    "dataset_inventory_csv": "outputs/proofrail_live_comparison/dataset_inventory.csv",
+    "dataset_profiles_json": "outputs/proofrail_live_comparison/dataset_profiles.json",
+    "normalized_comparison_rows_csv": "outputs/proofrail_live_comparison/normalized_comparison_rows.csv",
+    "provenance_json": "outputs/proofrail_live_comparison/PROVENANCE.json"
+  },
+  "profile_limit": null,
+  "provenance": {
+    "generator_kind": "bank_internal_validation_synthetic",
+    "generator_version": "proofrail_bank_internal_v2",
+    "scope_notice": "Demonstration study \u2014 synthetic/modeled data, not measured production data.",
+    "seed": 42,
+    "sensitivity_result_ranges": {
+      "authorization_working_hours_median": {
+        "max": 1.0,
+        "min": 0.84
+      },
+      "authorization_working_hours_p90": {
+        "max": 4.15,
+        "min": 1.21
+      },
+      "automated_check_count_mean": {
+        "max": 0.97,
+        "min": 0.97
+      },
+      "end_to_end_working_hours_median": {
+        "max": 57.61,
+        "min": 21.31
+      },
+      "end_to_end_working_hours_p90": {
+        "max": 129.99,
+        "min": 36.61
+      },
+      "manual_touch_count_mean": {
+        "max": 3.43,
+        "min": 3.13
+      }
+    },
+    "sensitivity_scenario_count": 27,
+    "swept_parameter_ranges": {
+      "condition_wait_scale": {
+        "max": 2.0,
+        "min": 0.5
+      },
+      "manual_review_rate": {
+        "max": 0.24,
+        "min": 0.06
+      },
+      "staff_scale": {
+        "max": 1.5,
+        "min": 0.75
+      }
+    },
+    "synthetic": true
+  },
+  "raw_comparison_included": false,
+  "raw_sources_included": false
+}

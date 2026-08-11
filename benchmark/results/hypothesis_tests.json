@@ -1,0 +1,115 @@
+{
+  "alpha": 0.05,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 42,
+  "h1": {
+    "bank_n": 75,
+    "bootstrap": {
+      "ci95_lower": 2919.0,
+      "ci95_upper": 3478.5,
+      "median_difference": 3171.1
+    },
+    "breakeven": {
+      "bank_median": 3171.1,
+      "bank_must_improve_by_factor": null,
+      "best_case_bank_seconds_in_sweep": 3024.0,
+      "breakeven_bank_value": 0.0,
+      "breakeven_inside_sweep": false,
+      "interpretation": "ProofRail's observed median is zero at the recorded resolution. Within this study, any positive modeled bank review time is above that recorded median.",
+      "metric": "authorization_latency_s",
+      "proofrail_median": 0.0,
+      "sensitivity_envelope": {
+        "max": 1.0,
+        "min": 0.84,
+        "parameter": "authorization_working_hours_median",
+        "scenarios_swept": 27
+      }
+    },
+    "column": "authorization_latency_s",
+    "hypothesis": "H1",
+    "label": "authorization latency (seconds)",
+    "paired_robustness": {
+      "alternative": "ProofRail lower",
+      "matched_pairs": 70,
+      "non_tied_pairs": 70,
+      "p_value_one_tailed": 8.470329472543003e-22,
+      "proofrail_higher": 0,
+      "proofrail_lower": 70,
+      "test": "exact paired sign test",
+      "ties": 0
+    },
+    "proofrail_n": 70,
+    "scope": "supported within the synthetic/modeled benchmark",
+    "separation": {
+      "complete_separation": true,
+      "max_of_smaller_sample": 0.083,
+      "min_of_larger_sample": 1097.4,
+      "note": "No overlap among observed values: every included ProofRail value is lower than every included bank value. The significance test is therefore a formality; the substantive question is how the result changes under the modeled bank assumptions, which the breakeven analysis addresses."
+    },
+    "supported": true,
+    "test": {
+      "n_a": 70,
+      "n_b": 75,
+      "p_value_one_tailed": 0.0,
+      "rank_biserial_effect_size": 1.0,
+      "u_complement": 5250.0,
+      "u_statistic": 0.0,
+      "z": -10.5684
+    }
+  },
+  "h2": {
+    "bank_n": 75,
+    "bootstrap": {
+      "ci95_lower": 3.0,
+      "ci95_upper": 3.0,
+      "median_difference": 3.0
+    },
+    "breakeven": {
+      "bank_median": 3.0,
+      "bank_must_improve_by_factor": null,
+      "best_case_bank_touches_in_sweep": 3.13,
+      "breakeven_bank_value": 0.0,
+      "breakeven_inside_sweep": false,
+      "interpretation": "Across all 27 swept scenarios the lowest modeled bank touch count is 3.13. Breakeven would require 0.0. Under the study's definition of a manual workflow, breakeven is outside the modeled family.",
+      "metric": "manual_touch_count",
+      "proofrail_median": 0.0,
+      "sensitivity_envelope": {
+        "max": 3.43,
+        "min": 3.13,
+        "parameter": "manual_touch_count_mean",
+        "scenarios_swept": 27
+      }
+    },
+    "column": "manual_touch_count",
+    "hypothesis": "H2",
+    "label": "manual verification touches per case",
+    "paired_robustness": {
+      "alternative": "ProofRail lower",
+      "matched_pairs": 75,
+      "non_tied_pairs": 75,
+      "p_value_one_tailed": 2.6469779601696886e-23,
+      "proofrail_higher": 0,
+      "proofrail_lower": 75,
+      "test": "exact paired sign test",
+      "ties": 0
+    },
+    "proofrail_n": 75,
+    "scope": "supported within the synthetic/modeled benchmark",
+    "separation": {
+      "complete_separation": true,
+      "max_of_smaller_sample": 1.0,
+      "min_of_larger_sample": 2.0,
+      "note": "No overlap among observed values: every included ProofRail value is lower than every included bank value. The significance test is therefore a formality; the substantive question is how the result changes under the modeled bank assumptions, which the breakeven analysis addresses."
+    },
+    "supported": true,
+    "test": {
+      "n_a": 75,
+      "n_b": 75,
+      "p_value_one_tailed": 0.0,
+      "rank_biserial_effect_size": 1.0,
+      "u_complement": 5625.0,
+      "u_statistic": 0.0,
+      "z": -11.5196
+    }
+  }
+}

@@ -1,0 +1,45 @@
+# Manually-triggered manifest refresh.
+#
+# The integrity manifest must be regenerated whenever a tracked file changes.
+# Normally you would run `python3 scripts/make_manifest.py` locally. If you are
+# working entirely through the GitHub web interface and have no terminal, run
+# this workflow instead: Actions -> "update manifest" -> "Run workflow".
+#
+# It is deliberately manual rather than automatic on every push, so that
+# refreshing the manifest stays an intentional act rather than something that
+# happens silently whenever a file changes.
+
+name: update manifest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate MANIFEST.sha256
+        run: python3 scripts/make_manifest.py
+
+      - name: Verify the repository still passes all checks
+        run: bash scripts/verify.sh
+
+      - name: Commit the refreshed manifest
+        run: |
+          if git diff --quiet -- MANIFEST.sha256; then
+            echo "Manifest already up to date; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add MANIFEST.sha256
+          git commit -m "Refresh integrity manifest"
+          git push

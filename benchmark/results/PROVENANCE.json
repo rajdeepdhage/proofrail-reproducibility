@@ -1,0 +1,48 @@
+{
+  "generator_kind": "bank_internal_validation_synthetic",
+  "generator_version": "proofrail_bank_internal_v2",
+  "scope_notice": "Demonstration study \u2014 synthetic/modeled data, not measured production data.",
+  "seed": 42,
+  "sensitivity_result_ranges": {
+    "authorization_working_hours_median": {
+      "max": 1.0,
+      "min": 0.84
+    },
+    "authorization_working_hours_p90": {
+      "max": 4.15,
+      "min": 1.21
+    },
+    "automated_check_count_mean": {
+      "max": 0.97,
+      "min": 0.97
+    },
+    "end_to_end_working_hours_median": {
+      "max": 57.61,
+      "min": 21.31
+    },
+    "end_to_end_working_hours_p90": {
+      "max": 129.99,
+      "min": 36.61
+    },
+    "manual_touch_count_mean": {
+      "max": 3.43,
+      "min": 3.13
+    }
+  },
+  "sensitivity_scenario_count": 27,
+  "swept_parameter_ranges": {
+    "condition_wait_scale": {
+      "max": 2.0,
+      "min": 0.5
+    },
+    "manual_review_rate": {
+      "max": 0.24,
+      "min": 0.06
+    },
+    "staff_scale": {
+      "max": 1.5,
+      "min": 0.75
+    }
+  },
+  "synthetic": true
+}

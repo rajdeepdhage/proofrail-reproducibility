@@ -1,0 +1,43 @@
+{
+  "by_strategy": {
+    "action": {
+      "detected": 40,
+      "localized": 40,
+      "trials": 40
+    },
+    "delete": {
+      "detected": 40,
+      "localized": 40,
+      "trials": 40
+    },
+    "payload": {
+      "detected": 40,
+      "localized": 40,
+      "trials": 40
+    },
+    "settlement": {
+      "detected": 40,
+      "localized": 40,
+      "trials": 40
+    },
+    "stored_hash": {
+      "detected": 40,
+      "localized": 40,
+      "trials": 40
+    },
+    "timestamp": {
+      "detected": 40,
+      "localized": 40,
+      "trials": 40
+    }
+  },
+  "chain_entries": 440,
+  "chain_file": "sample_audit_chain.db",
+  "detected": 240,
+  "detection_rate": 1.0,
+  "escaped": [],
+  "localization_rate": 1.0,
+  "localized": 240,
+  "seed": 42,
+  "trials": 240
+}

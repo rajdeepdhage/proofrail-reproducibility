@@ -1,0 +1,4 @@
+"system_type","First(transaction_id)","Mean(amount_usd)","Min*(amount_usd)","Max*(amount_usd)"
+"banking","T-44196-10",70763.31775591629,0,3932988
+"blockchain","89b2213caef40840a7c3d37c824198dcbbdd75829e5e21d9130d520491367db0",184841.7561100525,0.1990966824,377806948.04160005
+"proofrail","txn_0000001",4692.253573999999,29.88,150000

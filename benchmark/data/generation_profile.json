@@ -1,0 +1,115 @@
+{
+  "conformance_test": {
+    "cases": 75,
+    "confusion_matrix": {
+      "DISPUTED": {
+        "DISPUTED": 2
+      },
+      "HELD": {
+        "HELD": 3
+      },
+      "RELEASED": {
+        "RELEASED": 70
+      }
+    },
+    "failed": 0,
+    "note": "Conformance test: expected_outcome and the prototype both derive from the scenario field, so this confirms the implementation matches the specification \u2014 it does not establish that the specification is the correct design.",
+    "ok": true,
+    "pass_rate": 1.0,
+    "passed": 75,
+    "sample_mismatches": []
+  },
+  "design": "Synthetic bank-internal validation data only. No external settlement-rail rows, no provenance labels, and no raw external row copying.",
+  "generator_kind": "bank_internal_validation_synthetic",
+  "generator_version": "proofrail_bank_internal_v2",
+  "outputs": {
+    "bank_customer_journey": "outputs/proofrail_validation_sample/bank_customer_journey.csv",
+    "bank_internal_ledger": "outputs/proofrail_validation_sample/bank_internal_ledger.csv",
+    "bank_validation_event_log": "outputs/proofrail_validation_sample/bank_validation_event_log.csv",
+    "profile": "outputs/proofrail_validation_sample/generation_profile.json",
+    "prototype_step_log": "outputs/proofrail_validation_sample/prototype_step_log.csv",
+    "prototype_summary": "outputs/proofrail_validation_sample/prototype_summary.csv",
+    "validation_cases": "outputs/proofrail_validation_sample/validation_cases.csv"
+  },
+  "prototype_replay": {
+    "audit": {
+      "count_verified": 440,
+      "ok": true
+    },
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "Replayed 75/75 transactions in-process.",
+    "steps_csv": "outputs/proofrail_validation_sample/prototype_step_log.csv",
+    "summary_csv": "outputs/proofrail_validation_sample/prototype_summary.csv"
+  },
+  "provenance": {
+    "generator_kind": "bank_internal_validation_synthetic",
+    "generator_version": "proofrail_bank_internal_v2",
+    "scope_notice": "Demonstration study \u2014 synthetic/modeled data, not measured production data.",
+    "seed": 42,
+    "swept_parameter_ranges": {
+      "condition_wait_scale": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "manual_review_rate": [
+        0.06,
+        0.12,
+        0.24
+      ],
+      "staff_scale": [
+        0.75,
+        1.0,
+        1.5
+      ]
+    },
+    "synthetic": true
+  },
+  "seed": 42,
+  "summary": {
+    "amount_usd_max": 48582.7,
+    "amount_usd_mean": 6998.21,
+    "amount_usd_min": 217.65,
+    "cases": 75,
+    "channels": {
+      "api_instruction": 15,
+      "branch_ops": 3,
+      "relationship_manager": 25,
+      "secure_email": 7,
+      "treasury_portal": 25
+    },
+    "risk_bands": {
+      "high": 4,
+      "low": 53,
+      "medium": 18
+    },
+    "scenarios": {
+      "delayed": 12,
+      "disputed": 2,
+      "exception": 3,
+      "normal": 58
+    },
+    "transaction_types": {
+      "GOODS_SETTLEMENT": 29,
+      "INVOICE_PAYMENT": 24,
+      "MILESTONE_PAYMENT": 15,
+      "SERVICE_RETAINER": 7
+    }
+  },
+  "validation_contract": {
+    "extra_fields_are_bank_internal_context": true,
+    "prototype_replay_input": "validation_cases.csv",
+    "required_fields": [
+      "transaction_id",
+      "payer_id",
+      "payee_id",
+      "amount_usd",
+      "transaction_type",
+      "required_events",
+      "scenario",
+      "expected_outcome",
+      "created_offset_s"
+    ]
+  }
+}

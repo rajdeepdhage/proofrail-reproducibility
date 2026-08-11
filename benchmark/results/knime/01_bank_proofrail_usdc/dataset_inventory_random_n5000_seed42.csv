@@ -1,0 +1,6 @@
+"source_dataset","system_type","provenance","Count(transaction_id)","Mean(amount_usd)"
+"jpm_aml","banking","synthetic_research",2473,142576.56466622735
+"jpm_customer_journey","banking","synthetic_research",46,0
+"jpm_fraud_payment","banking","synthetic_research",2481,493.6494800485286
+"proofrail_synthetic","proofrail","synthetic_research",5000,4692.253573999999
+"usdc_stablecoin","blockchain","crypto_onchain",5000,29441.107640421542
