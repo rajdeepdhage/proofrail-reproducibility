@@ -27,9 +27,9 @@ bracketed placeholders before use.
 > specifications are documented in the repository. This publication includes or
 > references synthetic data provided by J.P. Morgan.
 >
-> The ProofRail engine core is subject to a pending patent application and is
+> The ProofRail engine core is the subject of a patent application in preparation and is
 > not publicly released. It is available to reviewers and examiners on request
-> under confidentiality. Public release is planned once patent prosecution
+> under confidentiality. Public release is planned once patent protection
 > permits. All published results are simulation-based demonstration evidence
 > derived from synthetic and modeled data; they are not measured production
 > performance.
@@ -41,7 +41,7 @@ bracketed placeholders before use.
 > https://github.com/rajdeepdhage/proofrail-reproducibility (archived at [DOI]).
 > Source banking datasets are distributed by their publisher on request; see the
 > repository's `DATA_ACCESS.md`. The engine core is withheld pending patent
-> prosecution and is available to examiners on request.
+> filing and is available to examiners on request.
 
 ---
 
