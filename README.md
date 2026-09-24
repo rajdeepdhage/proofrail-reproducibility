@@ -177,12 +177,12 @@ four executable KNIME workflows, and their exported result tables.
   procedure, the expected filenames and columns, and the blockchain extraction
   specifications.
 - **The ProofRail engine core** (rules evaluation and audit-chain *write* path).
-  A patent application covering parts of this mechanism is pending. The
+  A patent application covering parts of this mechanism is being prepared. The
   read-only verifier, the complete execution traces, and the metric code are
   published instead, which is sufficient to recompute and independently check
   every reported result. Full source is available to journal reviewers and
   thesis committee members on request under confidentiality; public release is
-  planned once patent prosecution permits.
+  planned once patent protection.
 
 This division is stated plainly rather than obscured: a reader can verify the
 results, and can see precisely which component is withheld and why.
@@ -212,7 +212,7 @@ expected to fail in this draft while H4, the repository URL, and DOI are pending
 | Data, logs, results, and documentation | CC BY 4.0 — see [`LICENSE-DATA`](LICENSE-DATA) |
 
 The MIT license applies only to the code published here and grants no rights in
-the ProofRail engine core or in any pending patent claims.
+the ProofRail engine core or any patent rights.
 
 ## Disclaimer
 
