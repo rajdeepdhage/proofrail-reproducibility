@@ -153,9 +153,8 @@ p-value.
 
 ## H4 — Distributional calibration (two-tailed)
 
-**Status: pending.** The aggregate KNIME tables are insufficient for a
-distribution test. Export the two sampled row-level tables described in
-`benchmark/row_level/README.md`, then run:
+**Status: completed; not supported.** The test runs on the sampled row-level
+tables described in `benchmark/row_level/README.md`:
 
 ```bash
 python3 metrics/h4_distribution_test.py \
@@ -168,6 +167,16 @@ finding**: generation was calibrated to the consolidated banking data, so
 agreement is partly by construction. Failure to reject the KS null does not
 prove equivalence. Report D, both sample sizes, the sampling seed, all excluded
 values, and this limitation.
+
+**Result.** `benchmark/results/h4_distribution_test.json` reports D = 0.446
+(p < .001) on `log1p(amount_usd)` using all 5,000 rows per system, including 264
+banking rows without a positive amount (46 customer-journey rows, which carry no
+amount, and 218 anti-money-laundering rows with a zero amount). The thesis
+reports the same test on base-ten logarithms of positive amounts only
+(n = 4,736 banking and 5,000 ProofRail): D = 0.427, p < .001, and D = 0.188,
+p < .001, after centring each distribution on its median. Both versions reject
+the null. The banking family pools two populations whose medians differ by about
+one decade, which no single unimodal generator can match.
 
 ---
 
@@ -192,6 +201,14 @@ bank fraud/AML flags, and Ethereum execution failures are different constructs.
 The supplied H5 chi-square is exploratory and omits Bitcoin and smart-contract
 events because they have no commensurate status field. See
 `docs/comparison_results.md`.
+
+**Corrected composition (thesis).** Of 5,000 ProofRail cases, 209 end held and
+394 disputed (12.1%), and a further 793 (15.9%) are released after delayed
+evidence. With held or disputed as the ProofRail category, against 618 flagged
+banking records, 25 failed Ethereum transactions, and 0 USDC failures:
+chi-square(3) = 1,225.73, p < .001, Cramer's V = 0.248. Counting all
+non-routine cases (27.9%), as the earlier analysis did, gives chi-square(3) =
+2,822.28, V = 0.376.
 
 ---
 

@@ -79,7 +79,7 @@ other systems.
 | System | Exception rate | What an "exception" is in that system |
 |---|---|---|
 | Banking | 0.1236 | Fraud/AML-flagged records |
-| ProofRail | 0.2792 | Cases **held or disputed** — value withheld pending evidence |
+| ProofRail | 0.2792 | Non-routine cases: 0.1586 released after delayed evidence, 0.0418 **held**, 0.0788 **disputed** (held or disputed: 0.1206) |
 | USDC | 0.0000 | No exception state exists in transfer data |
 | Ethereum | 0.0050 | Failed execution (`receipt_status`), *not* dispute or reversal |
 | Bitcoin | not reported | No status field exists to compute one |
@@ -90,10 +90,11 @@ ProofRail shows the *highest* exception rate and the blockchain systems show the
 lowest. Read as a performance ranking, that says ProofRail is the worst system
 and Bitcoin the best. That reading inverts what the numbers mean.
 
-- ProofRail's 27.9% is **the reversibility mechanism operating as designed**.
-  Those are cases where required evidence was absent or a dispute was raised, so
-  value was held rather than released. A held case is a payment that did *not*
-  complete incorrectly.
+- ProofRail's 27.9% counts every non-routine case. The 12.1% that ended
+  **held or disputed** are the conditional mechanism operating as designed:
+  required evidence was absent or a dispute was raised, so value was withheld
+  rather than released. The remaining 15.9% were released after delayed
+  evidence. A held case is a payment that did *not* complete incorrectly.
 - USDC's 0.0% and Bitcoin's and smart-contract's blanks are **not clean
   performance**. The analyzed extracts do not encode a held, disputed, or
   reversed state, so there is no commensurate event for this column to count.

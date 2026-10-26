@@ -27,7 +27,8 @@ bracketed placeholders before use.
 > specifications are documented in the repository. This publication includes or
 > references synthetic data provided by J.P. Morgan.
 >
-> The ProofRail engine core is the subject of a patent application in preparation and is
+> The ProofRail engine core is the subject of U.S. Provisional Patent Application
+> No. 64/183,770 (filed October 25, 2026) and is
 > not publicly released. It is available to reviewers and examiners on request
 > under confidentiality. Public release is planned once patent protection
 > permits. All published results are simulation-based demonstration evidence
@@ -40,8 +41,8 @@ bracketed placeholders before use.
 > executable KNIME comparison workflows supporting this chapter are available at
 > https://github.com/rajdeepdhage/proofrail-reproducibility (archived at [DOI]).
 > Source banking datasets are distributed by their publisher on request; see the
-> repository's `DATA_ACCESS.md`. The engine core is withheld pending patent
-> filing and is available to examiners on request.
+> repository's `DATA_ACCESS.md`. The engine core is the subject of U.S. Provisional
+> Patent Application No. 64/183,770 and is available to examiners on request.
 
 ---
 
