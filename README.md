@@ -113,12 +113,14 @@ blended average. All runs use n = 5,000 records per system, seed 42.
 | Bank vs. ProofRail vs. smart-contract events | n/a (non-monetary) | not reported (no status field) |
 
 Constant across all four: banking mean 70,763.32 / exception rate 0.1236;
-ProofRail mean 4,692.25 / exception rate 0.2792. That constancy is verified
+ProofRail mean 4,692.25 / non-routine share 0.2792. That constancy is verified
 automatically by `metrics/check_comparison_invariants.py`, which fails if either
 leg varies.
 
 > **Do not read the exception-rate column as a performance ranking.** ProofRail's
-> 27.9% counts cases held or disputed pending evidence. Blockchain zeros, blanks,
+> 27.9% counts every non-routine case: 15.9% released after delayed evidence,
+> 4.2% held, and 7.9% disputed. Only the 12.1% held or disputed are cases in
+> which value was withheld. Blockchain zeros, blanks,
 > and Ethereum execution failures are not the same construct. The analyzed
 > extracts do not encode comparable held/disputed/reversed terminal states; that
 > is a descriptive dataset finding, not proof that every blockchain protocol or
@@ -177,12 +179,13 @@ four executable KNIME workflows, and their exported result tables.
   procedure, the expected filenames and columns, and the blockchain extraction
   specifications.
 - **The ProofRail engine core** (rules evaluation and audit-chain *write* path).
-  A patent application covering parts of this mechanism is being prepared. The
+  It is described in U.S. Provisional Patent Application No. 64/183,770, filed
+  October 25, 2026 (patent pending). The
   read-only verifier, the complete execution traces, and the metric code are
   published instead, which is sufficient to recompute and independently check
   every reported result. Full source is available to journal reviewers and
   thesis committee members on request under confidentiality; public release is
-  planned once patent protection.
+  planned once patent prosecution permits.
 
 This division is stated plainly rather than obscured: a reader can verify the
 results, and can see precisely which component is withheld and why.
